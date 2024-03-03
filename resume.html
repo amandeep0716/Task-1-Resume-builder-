@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+         rel="stylesheet" 
+         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+         crossorigin="anonymous"
+        />
+
+        <link rel="stylesheet" href="style.css">
+        <title>Resume Generator</title>
+    </head>
+    <body>
+        <div class="container" id="cv-form">
+            <h1 class="text-center my-2">Resume Generator</h1>
+            <p class="text-center my-2">Welcome To our page</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <!--first col-->
+                    <h3>personal information</h3>
+                    <!--Your Name-->
+                    <div class="from-group">
+                        <br>
+                        <label for="NameField">Your Name</label>
+                        </br>
+                        <input type="text"
+                         id="NameField" 
+                         placeholder="Enter here"
+                         class="from-control"/>    
+                    </div>
+                    <!--contact-->
+                    <div class="from-group my-3"> 
+                        <br>
+                        <label for="contactField">Your contact</label>
+                        </br>
+                        <input type="text"
+                         id="contactField" 
+                         placeholder="Enter here"
+                         class="from-control"/>    
+                    </div>
+                    <!--address-->
+                    <div class="from-group my-3">
+                        <br>
+                        <label for="addressField">Your address</label>
+                        </br>
+                        <textarea 
+                         id="addressField" 
+                         placeholder="Enter here"
+                         class="from-control"
+                         rows="5"
+                        ></textarea>    
+                    </div>
+                    <p class="text-secondary my-3">Important Links</p>
+                    <!--facebook-->
+                    <div class="from-group my-3"> 
+                        <br>
+                        <label for="fbField">Facebook</label>
+                        </br>
+                        <input type="text"
+                         id="fbField" 
+                         placeholder="Enter here"
+                         class="from-control"/>    
+                    </div>
+                    <!--instagram-->
+                    <div class="from-group my-3"> 
+                        <br>
+                        <label for="insatField">instagram</label>
+                        </br>
+                        <input type="text"
+                         id="instaField" 
+                         placeholder="Enter here"
+                         class="from-control"/>    
+                    </div>
+                    <!--linkedin-->
+                    <div class="from-group my-3"> 
+                        <br>
+                        <label for="linkedField">LinkedIn</label>
+                        </br>
+                        <input type="text"
+                         id="linkedField" 
+                         placeholder="Enter here"
+                         class="from-control"/>    
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <!--second col-->
+                    <h3>professional information</h3>
+                    <!-- objective-->
+                    <div class="from-group my-3">
+                        <br>
+                        <label for="">objective</label>
+                        </br>
+                        <textarea 
+                         id="objectiveField" 
+                         placeholder="Enter here"
+                         class="from-control"
+                         rows="5"
+                        ></textarea>    
+                    </div>
+                    <!--work exprience-->
+                    <div class="from-group my-3" id="we">
+                        <br>
+                        <label for="">Work Exprience</label>
+                        </br>
+                        <textarea 
+                         id="contactField" 
+                         placeholder="Enter here"
+                         class="from-control wefield"
+                         rows="5"
+                        ></textarea>
+                        <!-- new textarea-->    
+                        <div class="container text-center mt-3" id="weAddButton">
+                            <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+                    <!--  Academic Qualification-->
+                    <div class="from-group my-3" id="aq">
+                        <br>
+                        <label for="">academic Qualification</label>
+                        </br>
+                        <textarea 
+                         id="contactField" 
+                         placeholder="Enter here"
+                         class="from-control eqfield"
+                         rows="5"
+                        ></textarea>    
+                        <div class="container text-center mt-3" id="aqAddButton">
+                            <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center mt-3">
+                <button onclick="generatecv()"class="btn btn-primary btn-primary btn-lg">Generate cv</button>
+            </div>
+        
+        </div>
+
+        <!--cv template-->
+        <div class="cotainer" id="cv-template">
+            <div class="row">
+                <div class="col-nd-4 text-rightcenter py-5 backgound">
+                    <!--first col-->
+                    <img src="https://www.shutterstock.com/image-vector/vector-flat-illustration-grayscale-avatar-600nw-2264922221.jpg"
+                     alt=""
+                     class="img-fulid text-rightcenter myimg"
+
+                     />
+                    <div class="container">
+                        <p id="nameT1">coding raja</p>
+                        <p id="contactT">+918885141233,+91990830787</p>
+                        <p class="addressT">2-4-651  ramnagar,india </p>
+                        <hr/>
+                        <p><a id="fbT" href="#1">https://www.facebook.com/coding raja</a></p>
+                        <p><a id="instaT"href="#2">https://www.instagram.com/coding raja</a></p>
+                        <p><a id="linkedT"href="#3">https://www.LinkedIn.com/coding raja</a></p>
+                    </div>
+                </div>
+                <div class="col-nd-8 py-5">
+                    <h1 id="nameT2" class="text-center" style="font-weight: 900;"> coding raja</h1>
+                    <!--second col-->
+                    <div class="card mt-4">
+                        <div class="card-header backgound">
+                            <h3>objective</h3>
+                        </div>
+                        <div class="card-body">
+                            <p id="objectiveT">Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. 
+                                Minus molestiae laudantium itaque dicta est perferendis excepturi ea quisquam,
+                                quo quidem incidunt asperiores consequuntur neque, 
+                                expedita molestias error eligendi blanditiis repellat similique? 
+                                Architecto cupiditate nam facilis, perspiciatis atque quidem, 
+                                sequi similique repellendus eum ipsum, aliquam nemo doloremque exercitationem expedita autem quis
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card mt-4">
+                        <div class="card-header backgound">
+                            <h3>Work Exprience</h3>
+                        </div>
+                        <div class="card-body">
+                           <ul id="weT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit?</li>
+                          
+                           </ul>
+                        </div>
+                    </div>
+                    <div class="card mt-4">
+                        <div class="card-header backgound">
+                            <h3>Academic Qualification</h3>
+                        </div>
+                        <div class="card-body">
+                           <ul id="aqT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit?</li>
+                          
+                           </ul>
+                        </div>
+                    </div>
+
+                    <div class="container mt-3 text-center">
+                        <button onclick="printcv()"class="btn background">
+                            print cv
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+   
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+         crossorigin="anonymous">
+        </script>
+    <script src="script.js"></script>
+    </body>
+</html>
